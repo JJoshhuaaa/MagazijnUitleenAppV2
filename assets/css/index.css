@@ -13,6 +13,134 @@ body {
 
 
 #section1 {
+    body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #fff;
+    height: 100vh;
+    }
+
+
+
+    /* Banner */
+    .banner {
+        text-align: center;
+        background-image: url(/img/);
+        background-color: #ec644a;
+        padding: 50px 20px;
+    }
+
+    .banner h1 {
+        font-size: 48px;
+        color: #FFA500;
+    }
+
+    .banner p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .banner-buttons button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #00555c;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .banner-buttons button:hover {
+        background-color: #FFA500;
+    }
+
+    /* Main Content */
+    main {
+        display: flex;
+        padding: 20px;
+    }
+
+    /* Catalog */
+    .catalog {
+        display: flex;
+        width: 70%;
+    }
+
+    .filters {
+        width: 20%;
+        background-color: #ec644a;
+        padding: 20px;
+    }
+
+    .filters h2 {
+        color: #FFA500;
+        margin-bottom: 10px;
+    }
+
+    .filters ul {
+        list-style: none;
+    }
+
+    .filters label {
+        color: #fff;
+    }
+
+    .item-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .item-card {
+        background-color: #e9907f;;
+        padding: 10px;
+        width: 150px;
+        text-align: center;
+    }
+
+    .item-card img {
+        width: 100%;
+    }
+
+    .item-card h3 {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .item-card button {
+        background-color: #00555c;
+        color: #fff;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .item-card button:hover {
+        background-color: #FFA500;
+    }
+
+    /* Dashboard */
+    .dashboard {
+        width: 30%;
+        padding: 20px;
+        background-color: #e9907f;
+        margin-left: 20px;
+    }
+
+    .tabs button {
+        background-color: #00555c;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .tabs button:hover {
+        background-color: #00555c;
+    }
+
+    
+
     background: var(--background-color);
     background-size: cover;
     height: 100vh;
