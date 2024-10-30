@@ -32,7 +32,7 @@ body {
 
     .banner h1 {
         font-size: 48px;
-        color: #FFA500;
+        color: #fff265;
     }
 
     .banner p {
@@ -50,7 +50,8 @@ body {
     }
 
     .banner-buttons button:hover {
-        background-color: #FFA500;
+        background-color: #fff265;
+        color: #ec644a;
     }
 
     /* Main Content */
@@ -72,7 +73,7 @@ body {
     }
 
     .filters h2 {
-        color: #FFA500;
+        color: #fff265;;
         margin-bottom: 10px;
     }
 
@@ -115,7 +116,8 @@ body {
     }
 
     .item-card button:hover {
-        background-color: #FFA500;
+        background-color: #fff265;
+        color: #ec644a;
     }
 
     /* Dashboard */
@@ -136,7 +138,8 @@ body {
     }
 
     .tabs button:hover {
-        background-color: #00555c;
+        background-color: #fff265;
+        color: #ec644a;
     }
 
     
