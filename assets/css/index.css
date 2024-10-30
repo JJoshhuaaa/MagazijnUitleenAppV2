@@ -1,0 +1,55 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* 
+    Section 1
+*/
+
+
+#section1 {
+    background: var(--background-color);
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* 
+    Section 2
+*/
+
+
+#section2 {
+    background: var(--background-color);
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* 
+    Section 3
+*/
+
+
+#section3 {
+    background: var(--background-color);
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* 
+    Section 4
+*/
+
+
+#section4 {
+    background: var(--background-color);
+    background-size: cover;
+    height: 100vh;
+}
