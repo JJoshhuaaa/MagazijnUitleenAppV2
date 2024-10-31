@@ -14,12 +14,10 @@ body {
 
 #section1 {
     body {
-    font-family: Arial, sans-serif;
     color: #fff;
     background-color: #fff;
     height: 100vh;
     }
-
 
 
     /* Banner */
@@ -31,13 +29,18 @@ body {
     }
 
     .banner h1 {
-        font-size: 48px;
-        color: #fff265;
+        font-size: 58px;
+        color: white;
+        font-family: "Playwrite GB S", cursive;
     }
 
     .banner p {
-        font-size: 20px;
+        font-size: 30px;
         margin-top: 10px;
+        font-family: "Dosis", sans-serif;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-top: 30px;
     }
 
     .banner-buttons button {
