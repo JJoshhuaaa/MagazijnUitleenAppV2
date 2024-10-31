@@ -35,7 +35,7 @@
                 <ul>
                     <li><label><input type="checkbox"> Availability</label></li>
                     <li><label><input type="checkbox"> Location</label></li>
-                    <li><label><input type="checkbox"> Category</label></li>
+                    <li><label><input type="checkbox"> Category</label></li> 
                 </ul>
             </aside>
             <div class="item-list">
