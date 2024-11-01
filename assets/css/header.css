@@ -11,6 +11,11 @@ i {
 	margin-right: 10px;
 }
 
+.navbar {
+	position: fixed;
+	width: 100%;
+}
+
 .navbar-logo{
 	padding: 15px;
 	color: #fff;

@@ -25,8 +25,8 @@
     <section class="banner">
         <h1>Magazijnuitleenapplicatie</h1>
     </section>
-
-    <!-- Main Content -->
+    <img class="achtergrond" src="../frontend/images/banner.avif">
+        <!-- Main Content -->
     <main>
     </main>
         </div>
