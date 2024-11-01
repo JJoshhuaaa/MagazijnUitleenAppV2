@@ -6,11 +6,9 @@ body {
     margin: 0;
 }
 
-
 /* 
     Section 1
 */
-
 
 #section1 {
     body {
@@ -23,10 +21,11 @@ body {
     /* Banner */
     .banner {
         text-align: center;
-        background-image: url(/img/);
+        background-image: url(./frontend/images/logo-vista.jpg);
         background-color: #ec644a;
         padding: 50px 20px;
     }
+
 
     .banner h1 {
         font-size: 58px;
