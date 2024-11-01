@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/css/index.css" rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
-    <title>index</title>
+    <title>Magazijnuitleenapplicatie</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,12 +24,6 @@
                 <!-- Banner -->
     <section class="banner">
         <h1>Magazijnuitleenapplicatie</h1>
-        <p>lenen en retourneren doe je bij ons</p>
-        <div class="banner-buttons">
-            <button>Register</button>
-            <button>Login</button>
-            <button>View Catalog</button>
-        </div>
     </section>
 
     <!-- Main Content -->

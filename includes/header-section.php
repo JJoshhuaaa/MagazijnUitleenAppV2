@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="../assets/css/header.css">
     
-    <title>Navbar</title>
+    <title>Magazijnuitleenapplicatie</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-custom navbar-mainbg">
