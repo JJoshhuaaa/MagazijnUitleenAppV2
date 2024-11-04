@@ -18,6 +18,36 @@
 
                 <button type="submit">sign-in</button>
             </form>
+
+            <div class="container">
+
+            <form method="post" action="{{ route('login') }}">
+            @csrf 
+            <label>Login</label>
+            <label>Username</label>
+            <input type="text" id="username" name="username" required>
+            <label>Password</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" name="submit">
+            </form>
+
+
+            <?php if (isset($_GET['error'])): ?>
+                <div class="error">
+                 <?php
+                if ($_GET['error'] == 'invalid_password') {
+                echo "Invalid password. Please try again.";
+                } elseif ($_GET['error'] == 'no_user') {
+                echo "No user found with that username. Please try again.";
+            }
+            ?>
+        </div>
+    <?php endif; ?>
+    
+    </div>
+
+
+
         </div>
     </main>
 </body>
