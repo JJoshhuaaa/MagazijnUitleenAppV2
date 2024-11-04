@@ -23,7 +23,9 @@
         <div class="content" id="section1">
     <section class="banner">
         <h1>Magazijnuitleenapplicatie</h1>
-        <img class="banner-img" src="../frontend/images/banner.avif">
+        <img class="banner-img" src="../frontend/images/stockroom.jpg" alt="banner">
+        <a>knop</a>
+        <a>knop</a>
     </section>
     <main>
     </main>

@@ -11,8 +11,10 @@ body {
 */
 
 .banner-img {
-    height: 80vh;
+    height: 50vh;
     width: 70vw;
+    margin-top: 5vh;
+    border-radius: 55px;
 }
 
 #section1 {
@@ -26,6 +28,13 @@ body {
         text-align: center;
         background-color: #ec644a;
         padding: 50px 20px;
+    }
+
+    .banner a {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        gap: 10px;
     }
 
     .banner h1 {
