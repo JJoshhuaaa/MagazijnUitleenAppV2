@@ -21,12 +21,10 @@
     
     <main>
         <div class="content" id="section1">
-                <!-- Banner -->
     <section class="banner">
         <h1>Magazijnuitleenapplicatie</h1>
+        <img class="banner-img" src="../frontend/images/banner.avif">
     </section>
-    <img class="achtergrond" src="../frontend/images/banner.avif">
-        <!-- Main Content -->
     <main>
     </main>
         </div>

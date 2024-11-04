@@ -24,7 +24,7 @@
         <ul class="navbar-nav ml-auto">
             <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
             <li class="nav-item">
-                <a class="nav-link" href="../frontend/sign-in.html"><i class="fas fa-user-plus"></i>Sign-in</a>
+                <a class="nav-link" href="../frontend/sign_in.php"><i class="fas fa-user-plus"></i>Sign-in</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="../frontend/products.html"><i class="fas fa-box-open"></i>Products</a>

@@ -10,28 +10,21 @@ body {
     Section 1
 */
 
-.achtergrond {
-    height: 20vh;
+.banner-img {
+    height: 50vh;
 }
 
 #section1 {
     body {
     color: #fff;
     background-color: #fff;
-    height: 100vh;
     }
-
 
     /* Banner */
     .banner {
         text-align: center;
-        background-image: url();
         background-color: #ec644a;
         padding: 50px 20px;
-    }
-
-    .banner img {
-        height: 20vh;
     }
 
     .banner h1 {

@@ -1,0 +1,68 @@
+/* Color Variables */
+:root {
+    --primary-color: #ec644a;    /* Card background color */
+    --secondary-color: #00555c;  /* Button background color */
+    --hover-color: #fff265;      /* Button hover color */
+    --text-color: #ffffff;       /* White text for labels and header */
+    --background-light: #f4a999; /* Light background color for page */
+}
+
+/* General Body and Background */
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    background-color: var(--background-light);
+}
+
+/* Navbar Styling */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-family: "Dosis", sans-serif;
+}
+
+/* Sign-In Card Styling */
+.card {
+    border-radius: 12px;
+    padding: 40px;
+    color: var(--text-color);
+}
+
+/* Sign-In Heading */
+.card h2 {
+    font-family: "Playwrite GB S", cursive;
+    font-size: 2rem;
+}
+
+/* Form Styling */
+.form-label {
+    font-family: "Dosis", sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.form-control {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Button Styling */
+.btn-custom {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-family: "Kanit", sans-serif;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
