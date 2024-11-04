@@ -16,7 +16,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-custom navbar-mainbg">
-    <a class="navbar-brand navbar-logo" href="#"><img src="../frontend/images/">Vista College</a>
+    <a class="navbar-brand navbar-logo" href="#"><img class="logo" src="../frontend/images/logo-vista.jpg"></a>
     <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
     </button>

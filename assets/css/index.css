@@ -6,16 +6,13 @@ body {
     margin: 0;
 }
 
+.logo {
+    height: 4vh;
+}
+
 /* 
     Section 1
 */
-
-.banner-img {
-    height: 50vh;
-    width: 70vw;
-    margin-top: 5vh;
-    border-radius: 55px;
-}
 
 #section1 {
     body {
@@ -41,7 +38,7 @@ body {
         margin-top: 5vh;
         font-size: 58px;
         color: white;
-        font-family: "Playwrite GB S", cursive;
+        font-family: "Permanent Marker", cursive;
     }
 
     .banner p {
@@ -51,6 +48,13 @@ body {
         font-weight: bold;
         text-decoration: underline;
         margin-top: 30px;
+    }
+
+    .banner-img {
+        height: 50vh;
+        width: 70vw;
+        margin-top: 5vh;
+        border-radius: 55px;
     }
 
     .banner-buttons button {
