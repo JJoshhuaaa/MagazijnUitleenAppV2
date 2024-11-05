@@ -20,10 +20,10 @@
         <img class="banner-img" src="../frontend/images/VistaBanner.png" alt="banner"> 
         <div class="button-container">
             <button class="button type1">
-                <span class="btn-txt">Hello</span>
+                <span class="btn-txt"><i class="fas fa-user-plus"></i>Sign-in</span>
             </button>
             <button class="button type1">
-                <span class="btn-txt">Hello</span>
+                <span class="btn-txt"><i class="fas fa-box-open"></i>Products</span>
             </button>
         </div>
     </section>
