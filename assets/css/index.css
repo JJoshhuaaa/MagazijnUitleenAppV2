@@ -6,9 +6,7 @@ body {
     margin: 0;
 }
 
-.logo {
-    height: 4vh;
-}
+
 
 /* 
     Section 1
@@ -30,15 +28,16 @@ body {
     .banner a {
         display: flex;
         justify-content: space-evenly;
-        text-align: center;
         gap: 10px;
+        width: 100%;
+        padding: 10px 20px;
     }
 
     .banner h1 {
         margin-top: 5vh;
         font-size: 58px;
         color: white;
-        font-family: "Permanent Marker", cursive;
+        font-family: 'Playwrite GB S', cursive;
     }
 
     .banner p {
@@ -51,9 +50,9 @@ body {
     }
 
     .banner-img {
-        height: 50vh;
+        height: 60vh;
         width: 70vw;
-        margin-top: 5vh;
+        margin-top: 10vh;
         border-radius: 55px;
     }
 
