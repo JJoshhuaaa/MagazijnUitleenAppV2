@@ -2,7 +2,6 @@
 :root {
     --primary-color: #ec644a;    /* Card background color */
     --secondary-color: #00555c;  /* Button background color */
-    --hover-color: #fff265;      /* Button hover color */
     --text-color: #ffffff;       /* White text for labels and header */
     --background-light: #f4a999; /* Light background color for page */
 }
@@ -54,15 +53,11 @@ body {
 
 /* Button Styling */
 .btn-custom {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: #00555c;  /* Dezelfde groene kleur als de navbar */
+    color: #ffffff;             /* Witte tekst */
     font-size: 1.1rem;
     font-family: "Kanit", sans-serif;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-custom:hover {
-    background-color: var(--hover-color);
-    color: var(--primary-color);
+    border: none;               /* Verwijder de border voor een cleaner look */
+    padding: 10px 20px;         /* Voeg wat padding toe voor betere proporties */
 }
