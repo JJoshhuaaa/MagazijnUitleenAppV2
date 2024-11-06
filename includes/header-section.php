@@ -16,7 +16,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-custom navbar-mainbg">
-    <a class="navbar-brand navbar-logo" href="#"><img class="logo" src="../frontend/images/VistaLogo.png" style="height: 33px;"></a>
+    <a class="navbar-brand navbar-logo" href="index.php"><img class="logo" src="../frontend/images/VistaLogo.png" style="height: 33px;"></a>
     <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
     </button>
@@ -24,9 +24,12 @@
         <ul class="navbar-nav ml-auto">
             <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
             <li class="nav-item">
+                <a class="nav-link" href="../frontend/index.php"><i class="fas fa-home"></i>Home</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="../frontend/sign_in.php"><i class="fas fa-user-plus"></i>Sign-in</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="../frontend/products.html"><i class="fas fa-box-open"></i>Products</a>
             </li>
             <li class="nav-item">

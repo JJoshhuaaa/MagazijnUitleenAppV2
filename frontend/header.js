@@ -1,4 +1,20 @@
-// ---------Responsive-navbar-active-animation-----------
+function setActiveNavItem() {
+    // Haal het huidige pad op
+    const currentPath = window.location.pathname;
+    
+    // Verwijder alle active klassen
+    $('#navbarSupportedContent ul li').removeClass('active');
+        
+    // Zoek de juiste link en voeg active toe aan de parent li
+    $('#navbarSupportedContent ul li a').each(function() {
+        if (currentPath.includes($(this).attr('href').split('/').pop())) {
+            $(this).parent('li').addClass('active');
+            // Toon de hori-selector alleen als er een actief item is
+            $('.hori-selector').css('opacity', '1');
+        }
+    });
+}
+
 function test() {
     var tabsNewAnim = $('#navbarSupportedContent');
     var activeItemNewAnim = tabsNewAnim.find('.active');
@@ -30,6 +46,7 @@ function test() {
 }
 
 $(document).ready(function() {
+    setActiveNavItem();
     setTimeout(function() { test(); });
 });
 
