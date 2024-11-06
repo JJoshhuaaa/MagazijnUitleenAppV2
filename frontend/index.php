@@ -17,9 +17,15 @@
     <main>
         <div class="content" id="section1">
     <section class="banner">
-        <img class="banner-img" src="../frontend/images/VistaBanner.png" alt="banner">
-        <a>knop</a>
-        <a>knop</a>
+        <img class="banner-img" src="../frontend/images/VistaBanner.png" alt="banner"> 
+        <div class="button-container">
+            <button class="button type1">
+                <span class="btn-txt"><i class="fas fa-user-plus"></i>Sign-in</span>
+            </button>
+            <button class="button type1">
+                <span class="btn-txt"><i class="fas fa-box-open"></i>Products</span>
+            </button>
+        </div>
     </section>
     <?php
     require '../includes/footer-section.php';
