@@ -34,7 +34,7 @@
             <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
         </div>
         <div class="footer_copyright">
-            <p>&copy; 2024 MagazijnApp Vista</p>
+            <p>&copy; MagazijnApp </br> Vista</p>
         </div>
     </footer>
 
