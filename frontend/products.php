@@ -24,6 +24,63 @@ $is_admin = isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin';
 $stmt = $pdo->query("SELECT * FROM products");
 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// Voeg deze test data toe na de database connectie
+$additional_products = [
+    [
+        'id' => 999,
+        'name' => 'Test Product 1',
+        'description' => 'This is a test product with some sample description text.',
+        'category' => 'A',
+        'quantity' => 10,
+        'price' => 99.99
+    ],
+    [
+        'id' => 998,
+        'name' => 'Test Product 2',
+        'description' => 'Another test product with different specifications.',
+        'category' => 'B',
+        'quantity' => 5,
+        'price' => 149.99
+    ],
+    [
+        'id' => 997,
+        'name' => 'Test Product 3',
+        'description' => 'Third test product with unique features.',
+        'category' => 'C',
+        'quantity' => 15,
+        'price' => 79.99
+    ],
+    [
+        'id' => 996,
+        'name' => 'Test Product 4',
+        'description' => 'Fourth test product for demonstration.',
+        'category' => 'A',
+        'quantity' => 8,
+        'price' => 199.99
+    ],
+    [
+        'id' => 995,
+        'name' => 'Test Product 5',
+        'description' => 'Fifth test product with sample information.',
+        'category' => 'B',
+        'quantity' => 12,
+        'price' => 129.99
+    ],
+    [
+        'id' => 994,
+        'name' => 'Test Product 6',
+        'description' => 'Sixth test product for layout testing.',
+        'category' => 'C',
+        'quantity' => 20,
+        'price' => 89.99
+    ]
+];
+
+// Voeg de test producten toe aan de bestaande producten array
+foreach ($additional_products as $product) {
+    $products[] = $product;
+}
+
 // Group products by category
 $groupedProducts = [];
 foreach ($products as $product) {
