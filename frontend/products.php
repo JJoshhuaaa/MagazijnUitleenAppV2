@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/products.css">
 </head>
 <body>
+    
 <?php
 require '../includes/header-section.php';
-require '../includes/db_connection.php';
+include '../includes/db_connection.php';
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -36,9 +37,10 @@ foreach ($products as $product) {
 // Get the selected category from the query string
 $selectedCategory = isset($_GET['category']) ? $_GET['category'] : '';
 ?>
-
+<div style="background-color: #ec644a;">
 <main class="container">
-    <section class="products-section">
+    <section class="products-section" id="products-section">
+        <br>
         <h1 class="section-title">Products</h1>
         <div class="filters">
             <label for="category">Category:</label>
@@ -50,6 +52,8 @@ $selectedCategory = isset($_GET['category']) ? $_GET['category'] : '';
             </select>
         </div>
         <div class="products-grid">
+
+        
             <?php
             // Display products based on the selected category
             if ($selectedCategory === '') {
@@ -117,7 +121,7 @@ if ($selectedCategory === '') {
         <?php endif; ?>
     </section>
 </main>
-
+</div>
 <?php
 require '../includes/footer-section.php';
 ?>
