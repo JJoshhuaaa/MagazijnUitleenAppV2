@@ -30,10 +30,10 @@
                 <a class="nav-link" href="../frontend/sign_in.php"><i class="fas fa-user-plus"></i>Sign-in</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../frontend/products.html"><i class="fas fa-box-open"></i>Products</a>
+                <a class="nav-link" href="../frontend/products.php"><i class="fas fa-box-open"></i>Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../frontend/checkout.html"><i class="fas fa-shopping-cart"></i>Check-out</a>
+                <a class="nav-link" href="../frontend/check_out.php"><i class="fas fa-shopping-cart"></i>Check-out</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../frontend/late-fees.html"><i class="fas fa-dollar-sign"></i>Late return fees</a>

@@ -1,5 +1,9 @@
+/* Apply font to everything */
+* {
+    font-family: "Encode Sans Expanded", sans-serif;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
@@ -15,6 +19,7 @@ body {
     text-align: center;
     color: #2c3e50;
     margin-bottom: 30px;
+    font-size: 50px;
 }
 
 .table-responsive {
@@ -52,28 +57,34 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #000 !important;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    margin-right: 10vw;
 }
 
 .btn-loan {
     background-color: #f39c12;
+    border-color: #000;
 }
 
 .btn-edit {
     background-color: #3498db;
+    border-color: #000;
 }
 
 .btn-delete {
     background-color: #e74c3c;
+    border-color: #000;
 }
 
 .btn-add {
     background-color: #2ecc71;
+    border-color: #000;
     margin-top: 20px;
 }
 
@@ -84,11 +95,16 @@ body {
 .actions {
     display: flex;
     gap: 10px;
+    width: 80%;
+    margin: 10px auto;
+    padding-left: 0%;
+    justify-content: flex-start;
+    margin-left: 5%;
 }
 
 .actions .btn {
-    flex: 1;
-    text-align: center;
+    flex: 0 1 auto;
+    margin-right: 5px;
 }
 
 @media (max-width: 768px) {
@@ -103,4 +119,49 @@ body {
     .actions {
         flex-direction: column;
     }
+}
+
+.products-section {
+    background-color: #fff;
+    border-radius: 50px;
+    margin-top: 10vh;
+}
+
+.product-card {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    text-align: left;
+    margin: 10px 0 30px 0;
+    padding-left: 5%;
+}
+
+.product-description,
+.product-quantity,
+.product-price,
+.product-category {
+    text-align: left;
+    margin: 10px;
+    width: 80%;
+    padding-left: 5%;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+/* Make sure links with btn class show the border */
+a.btn {
+    border: 2px solid #000;
 }
