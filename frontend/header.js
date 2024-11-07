@@ -7,9 +7,12 @@ function setActiveNavItem() {
         
     // Zoek de juiste link en voeg active toe aan de parent li
     $('#navbarSupportedContent ul li a').each(function() {
-        if (currentPath.includes($(this).attr('href').split('/').pop())) {
+        const href = $(this).attr('href').split('/').pop();
+        // Check voor zowel sign_in.php als sign_up.php
+        if (currentPath.includes(href) || 
+            (href === 'sign_in.php' && currentPath.includes('sign_up.php')) || 
+            (href === 'sign_up.php' && currentPath.includes('sign_in.php'))) {
             $(this).parent('li').addClass('active');
-            // Toon de hori-selector alleen als er een actief item is
             $('.hori-selector').css('opacity', '1');
         }
     });

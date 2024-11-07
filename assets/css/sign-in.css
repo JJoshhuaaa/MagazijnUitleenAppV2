@@ -1,63 +1,254 @@
-/* Color Variables */
-:root {
-    --primary-color: #ec644a;    /* Card background color */
-    --secondary-color: #00555c;  /* Button background color */
-    --text-color: #ffffff;       /* White text for labels and header */
-    --background-light: #f4a999; /* Light background color for page */
-}
-
-/* General Body and Background */
-body {
-    font-family: "Roboto Condensed", sans-serif;
-    margin: 0;
-    background-color: var(--background-light);
-}
-
-/* Navbar Styling */
-.navbar-brand {
-    font-size: 1.5rem;
-}
-
-.navbar-nav .nav-link {
-    font-size: 1rem;
-    font-family: "Dosis", sans-serif;
-}
-
-/* Sign-In Card Styling */
-.card {
-    border-radius: 12px;
-    padding: 40px;
-    color: var(--text-color);
-}
-
-/* Sign-In Heading */
-.card h2 {
-    font-family: "Playwrite GB S", cursive;
-    font-size: 2rem;
-}
-
-/* Form Styling */
-.form-label {
-    font-family: "Dosis", sans-serif;
-    font-size: 1rem;
-    color: var(--text-color);
-}
-
-.form-control {
-    background-color: #ffffff;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
+*{
+    margin: 0px;
+    padding: 0px;;
+  }
+  
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .container
+  {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: red;
+    background: linear-gradient(to bottom, rgb(6, 108, 100),  rgb(14, 48, 122));
+    width: 800px;
+    height: 400px;
+    margin: 10% auto;;
+    border-radius: 5px;
+  }
+  
+  .content-holder
+  {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-top: 15%;
+    padding: 50px;
+  }
+  
+  .content-holder h2
+  {
+    font-size: 34px;
+    margin: 20px auto;
+  }
+  
+  .content-holder p
+  {
+    margin: 30px auto;
+  }
+  
+  .content-holder button
+  {
+    border:none;
+    font-size: 15px;
     padding: 10px;
-    font-size: 1rem;
-}
-
-/* Button Styling */
-.btn-custom {
-    background-color: #00555c;  /* Dezelfde groene kleur als de navbar */
-    color: #ffffff;             /* Witte tekst */
-    font-size: 1.1rem;
-    font-family: "Kanit", sans-serif;
-    border-radius: 8px;
-    border: none;               /* Verwijder de border voor een cleaner look */
-    padding: 10px 20px;         /* Voeg wat padding toe voor betere proporties */
-}
+    border-radius: 6px;
+    background-color: white;
+    width: 150px;
+    margin: 20px auto;
+  }
+  
+  
+  .box-2{
+    background-color: white;
+  
+    margin: 5px;
+  }
+  
+  .login-form-container
+  {
+    text-align: center;
+    margin-top: 10%;
+  
+  }
+  
+  .login-form-container h1
+  {
+    color: black;
+    font-size: 24px;
+    padding: 20px;
+  }
+  
+  .input-field
+  {
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid rgb(168, 168, 168);
+    width: 250px;
+    outline: none;
+  }
+  
+  .login-button{
+    box-sizing: border-box;
+    color: white;
+    font-size: 14px;
+    padding: 13px;
+    border-radius: 7px;
+    border: none;
+    width: 250px;
+    outline: none;
+    background-color: rgb(56, 102, 189);
+  }
+  
+  
+  
+  .button-2
+  {
+    display: none;
+  }
+  
+  
+  
+  
+  
+  .signup-form-container
+  {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    text-align: center;
+    display: none;
+  }
+  
+  
+  .signup-form-container h1
+  {
+    color: black;
+    font-size: 24px;
+    padding: 20px;
+  }
+  
+  .signup-button{
+    box-sizing: border-box;
+    color: white;
+    font-size: 14px;
+    padding: 13px;
+    border-radius: 7px;
+    border: none;
+    width: 250px;
+    outline: none;
+    background-color: rgb(56, 189, 149);  
+  }
+  
+  .login-container {
+    width: 800px;
+    height: 400px;
+    margin: 100px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+  
+  .left-side {
+    width: 40%;
+    background: #00555c;
+    padding: 40px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-side h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .signup-btn {
+    background: white;
+    color: #00555c;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .signup-btn:hover {
+    background: #f5f5f5;
+    text-decoration: none;
+  }
+  
+  .right-side {
+    width: 60%;
+    padding: 40px;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .login-form h2 {
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    padding-left: 45px;
+    margin-bottom: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #00555c;
+  }
+  
+  .input-field:focus + i {
+    color: #00555c;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00555c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background: #004147;
+  }
+  
+  .input-container {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+  }
+  
+  .input-container .input-field {
+    padding-left: 45px;
+    width: calc(100% - 45px);
+  }
