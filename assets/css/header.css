@@ -12,7 +12,7 @@ i {
 }
 
 .navbar {
-	position: fixed;
+	position: relative;
 	width: 100%;
 }
 

@@ -27,7 +27,7 @@
                 <a class="nav-link" href="../frontend/index.php"><i class="fas fa-home"></i>Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../frontend/sign_in.php"><i class="fas fa-user-plus"></i>Sign-in</a>
+                <a class="nav-link" href="../frontend/sign_in.php" data-group="auth"><i class="fas fa-user-plus"></i>Sign-in</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../frontend/products.php"><i class="fas fa-box-open"></i>Products</a>
