@@ -1,0 +1,123 @@
+[
+    {
+      "id": 999,
+      "name": "Gaming PC",
+      "description": "High-performance gaming PC.",
+      "category": "Computers",
+      "quantity": 10,
+      "price": 999.99
+    },
+    {
+      "id": 998,
+      "name": "Behuizing",
+      "description": "Stijlvolle behuizing voor je PC.",
+      "category": "Accessoires",
+      "quantity": 5,
+      "price": 149.99
+    },
+    {
+      "id": 997,
+      "name": "Monitor",
+      "description": "24-inch Full HD monitor.",
+      "category": "Displays",
+      "quantity": 15,
+      "price": 79.99
+    },
+    {
+      "id": 995,
+      "name": "Toetsenbord",
+      "description": "Mechanisch toetsenbord met RGB.",
+      "category": "Accessoires",
+      "quantity": 12,
+      "price": 129.99
+    },
+    {
+      "id": 994,
+      "name": "Muis",
+      "description": "Ergonomische gaming muis.",
+      "category": "Accessoires",
+      "quantity": 20,
+      "price": 89.99
+    },
+    {
+      "id": 993,
+      "name": "Headset",
+      "description": "Comfortabele gaming headset.",
+      "category": "Accessoires",
+      "quantity": 8,
+      "price": 59.99
+    },
+    {
+      "id": 992,
+      "name": "Moederbord",
+      "description": "ATX moederbord voor gaming.",
+      "category": "Computers",
+      "quantity": 10,
+      "price": 199.99
+    },
+    {
+      "id": 991,
+      "name": "Grafische Kaart",
+      "description": "High-end grafische kaart voor gamers.",
+      "category": "Computers",
+      "quantity": 6,
+      "price": 499.99
+    },
+    {
+      "id": 990,
+      "name": "Voeding",
+      "description": "Krachtige voeding voor je PC.",
+      "category": "Computers",
+      "quantity": 10,
+      "price": 89.99
+    },
+    {
+      "id": 989,
+      "name": "SSD",
+      "description": "1TB SSD voor snelle opslag.",
+      "category": "Opslag",
+      "quantity": 15,
+      "price": 129.99
+    },
+    {
+      "id": 988,
+      "name": "Webcam",
+      "description": "HD webcam voor videoconferenties.",
+      "category": "Accessoires",
+      "quantity": 10,
+      "price": 49.99
+    },
+    {
+      "id": 987,
+      "name": "Microfoon",
+      "description": "Professionele USB-microfoon.",
+      "category": "Accessoires",
+      "quantity": 7,
+      "price": 89.99
+    },
+    {
+      "id": 986,
+      "name": "Laptopstandaard",
+      "description": "Verstelbare laptopstandaard voor ergonomie.",
+      "category": "Accessoires",
+      "quantity": 15,
+      "price": 39.99
+    },
+    {
+      "id": 985,
+      "name": "Externe Harde Schijf",
+      "description": "2TB externe harde schijf voor opslag.",
+      "category": "Opslag",
+      "quantity": 8,
+      "price": 99.99
+    },
+    {
+      "id": 984,
+      "name": "Gaming Stoel",
+      "description": "Ergonomische gaming stoel voor comfort.",
+      "category": "Accessoires",
+      "quantity": 5,
+      "price": 199.99
+    }
+  ]
+  
