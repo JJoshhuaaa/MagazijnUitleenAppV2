@@ -3,14 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <!-- Toegevoegde CSS bestanden -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/late-fees.css">
+    
+    <title>Magazijnuitleenapplicatie</title>
 </head>
 <body>
+    <!-- Toegevoegde navbar -->
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="index.php"><img class="logo" src="../frontend/images/VistaLogo.png" style="height: 33px;"></a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="../frontend/index.php"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../frontend/sign_in.php" data-group="auth"><i class="fas fa-user-plus"></i>Sign-in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../frontend/products.html"><i class="fas fa-box-open"></i>Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../frontend/checkout.html"><i class="fas fa-shopping-cart"></i>Check-out</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../frontend/late-return-fees.html"><i class="fas fa-dollar-sign"></i>Late return fees</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <main>
         <div class="content">
-            <h1>Late-return-fees</h1>
-            <p></p>
+            <h1>Boetebeleid te laat inleveren</h1>
+            
+            <section class="mb-4">
+                <h2>Algemene informatie</h2>
+                <p>Om een eerlijk en efficiënt uitleensysteem te garanderen, hanteren wij een boeteregeling voor items die niet op tijd worden teruggebracht. Dit zorgt ervoor dat alle studenten en medewerkers kunnen rekenen op de beschikbaarheid van materialen wanneer ze die nodig hebben.</p>
+            </section>
+
+            <section class="mb-4">
+                <h2>Boetetarieven</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Categorie</th>
+                                <th>Boete per dag</th>
+                                <th>Maximum boete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Standaard materialen</td>
+                                <td>€2,00</td>
+                                <td>€20,00</td>
+                            </tr>
+                            <tr>
+                                <td>Specialistische apparatuur</td>
+                                <td>€5,00</td>
+                                <td>€50,00</td>
+                            </tr>
+                            <tr>
+                                <td>Kleine accessoires</td>
+                                <td>€1,00</td>
+                                <td>€10,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2>Belangrijke informatie</h2>
+                <ul>
+                    <li>De boete gaat in vanaf de eerste dag na de inleverdatum</li>
+                    <li>Weekenden en feestdagen tellen niet mee in de boeteberekening</li>
+                    <li>Bij verlies of beschadiging worden extra kosten in rekening gebracht</li>
+                    <li>Boetes moeten worden voldaan voordat nieuwe items kunnen worden geleend</li>
+                </ul>
+            </section>
+
+            <section class="mb-4">
+                <h2>Voorkom boetes</h2>
+                <p>Je kunt boetes gemakkelijk voorkomen door:</p>
+                <ul>
+                    <li>Items op tijd in te leveren</li>
+                    <li>Tijdig een verlenging aan te vragen (minimaal 24 uur voor de inleverdatum)</li>
+                    <li>Je e-mail in de gaten te houden voor herinneringen</li>
+                    <li>De uitleentermijn in je agenda te zetten</li>
+                </ul>
+            </section>
+
+            <section class="mb-4">
+                <h2>Contact</h2>
+                <p>Heb je vragen over een boete of wil je een betalingsregeling treffen? Neem dan contact op met de magazijnbeheerder:</p>
+                <ul>
+                    <li>E-mail: magazijn@vistacollege.nl</li>
+                    <li>Telefoon: 088-1234567</li>
+                    <li>Locatie: Ruimte 1.15 (eerste verdieping)</li>
+                </ul>
+            </section>
         </div>
     </main>
+
+    <!-- Toegevoegde JavaScript bestanden -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../frontend/header.js"></script>
 </body>
 </html>

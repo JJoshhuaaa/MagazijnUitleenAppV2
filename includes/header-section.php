@@ -36,7 +36,7 @@
                 <a class="nav-link" href="../frontend/check_out.php"><i class="fas fa-shopping-cart"></i>Check-out</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../frontend/late-fees.html"><i class="fas fa-dollar-sign"></i>Late return fees</a>
+                <a class="nav-link" href="../frontend/late-return-fees.html"><i class="fas fa-dollar-sign"></i>Late return fees</a>
             </li>
         </ul>
     </div>
