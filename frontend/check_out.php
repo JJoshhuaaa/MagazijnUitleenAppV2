@@ -3,12 +3,12 @@ session_start();
 require '../includes/header-section.php'; 
 include '../includes/db_connection.php';  
 
-// Инициализация корзины, если она ещё не создана
+
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-// Обработка действий с корзиной
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'];
     $id = $_POST['id'];
@@ -17,20 +17,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     switch ($action) {
         case 'remove':
-            // Удаление товара из корзины
+
             $_SESSION['cart'] = array_filter($_SESSION['cart'], function ($item) use ($id) {
                 return $item['id'] != $id;
             });
             break;
 
         case 'clear':
-            // Очистка всей корзины
+
             $_SESSION['cart'] = [];
             break;
     }
 }
 
-// Сумма всех товаров в корзине
+
 $total = 0;
 foreach ($_SESSION['cart'] as $item) {
     $total += $item['price'] * $item['quantity'];

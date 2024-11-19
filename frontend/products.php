@@ -1,30 +1,30 @@
 <?php
 session_start();
-include '../includes/db_connection.php';  // Соединение с базой данных
+include '../includes/db_connection.php';
 
-// Инициализация корзины, если она еще не создана
+
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-// Обработка добавления товара в корзину
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
     $name = $_POST['name'];
     $price = $_POST['price'];
     $quantity = $_POST['quantity'];
 
-    // Проверка, есть ли уже товар в корзине
+
     $found = false;
     foreach ($_SESSION['cart'] as &$item) {
         if ($item['id'] == $id) {
-            $item['quantity'] += $quantity;  // Увеличиваем количество
+            $item['quantity'] += $quantity;  
             $found = true;
             break;
         }
     }
 
-    // Если товар еще не в корзине, добавляем его
+
     if (!$found) {
         $_SESSION['cart'][] = [
             'id' => $id,
@@ -35,10 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Получение категории из GET-запроса
+
 $selectedCategory = isset($_GET['category']) ? $_GET['category'] : '';
 
-// Формируем SQL-запрос с учетом выбранной категории
 $sql = "SELECT * FROM products";
 if ($selectedCategory) {
     $sql .= " WHERE category = :category";
@@ -46,7 +45,7 @@ if ($selectedCategory) {
 
 $stmt = $pdo->prepare($sql);
 
-// Если категория выбрана, добавляем параметр в запрос
+
 if ($selectedCategory) {
     $stmt->bindParam(':category', $selectedCategory, PDO::PARAM_STR);
 }
@@ -85,7 +84,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </form>
         </div>
         
-        <!-- Отображение товаров -->
+
         <div class="products-grid">
             <?php foreach ($products as $product): ?>
                 <div class="product-card">
