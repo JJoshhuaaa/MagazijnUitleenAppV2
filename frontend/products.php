@@ -1,3 +1,61 @@
+<?php
+session_start();
+include '../includes/db_connection.php';  // Соединение с базой данных
+
+// Инициализация корзины, если она еще не создана
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
+
+// Обработка добавления товара в корзину
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $price = $_POST['price'];
+    $quantity = $_POST['quantity'];
+
+    // Проверка, есть ли уже товар в корзине
+    $found = false;
+    foreach ($_SESSION['cart'] as &$item) {
+        if ($item['id'] == $id) {
+            $item['quantity'] += $quantity;  // Увеличиваем количество
+            $found = true;
+            break;
+        }
+    }
+
+    // Если товар еще не в корзине, добавляем его
+    if (!$found) {
+        $_SESSION['cart'][] = [
+            'id' => $id,
+            'name' => $name,
+            'price' => $price,
+            'quantity' => $quantity
+        ];
+    }
+}
+
+// Получение категории из GET-запроса
+$selectedCategory = isset($_GET['category']) ? $_GET['category'] : '';
+
+// Формируем SQL-запрос с учетом выбранной категории
+$sql = "SELECT * FROM products";
+if ($selectedCategory) {
+    $sql .= " WHERE category = :category";
+}
+
+$stmt = $pdo->prepare($sql);
+
+// Если категория выбрана, добавляем параметр в запрос
+if ($selectedCategory) {
+    $stmt->bindParam(':category', $selectedCategory, PDO::PARAM_STR);
+}
+
+$stmt->execute();
+$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,119 +67,49 @@
     <link rel="stylesheet" href="../assets/css/products.css">
 </head>
 <body>
-    
-<?php
-require '../includes/header-section.php';
-include '../includes/db_connection.php';
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
+<?php require '../includes/header-section.php'; ?>
 
-$is_admin = isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin';
-
-$productsJSON = file_get_contents('../includes/products.json');
-$products = json_decode($productsJSON, true);
-// Groepeer de producten per categorie
-$groupedProducts = [];
-foreach ($products as $product) {
-    $category = $product['category'];
-    if (!isset($groupedProducts[$category])) {
-        $groupedProducts[$category] = [];
-    }
-    $groupedProducts[$category][] = $product;
-}
-
-$selectedCategory = isset($_GET['category']) ? $_GET['category'] : '';
-?>
-<div style="background-color: #ec644a;">
 <main class="container">
-    <section class="products-section" id="products-section">
-        <br>
+    <section class="products-section">
         <h1 class="section-title"><i class="fas fa-box-open"></i> Products</h1>
         <div class="filters">
             <label for="category">Category:</label>
-            <select id="category" name="category" onchange="window.location.href = '?category=' + this.value;">
-                <option value="">All</option>
-                <option value="Computers" <?php if ($selectedCategory === 'Computers') echo 'selected'; ?>>Computers</option>
-                <option value="Accessoires" <?php if ($selectedCategory === 'Accessoires') echo 'selected'; ?>>Accessoires</option>
-                <option value="Displays" <?php if ($selectedCategory === 'Displays') echo 'selected'; ?>>Displays</option>
-                <option value="Opslag" <?php if ($selectedCategory === 'Opslag') echo 'selected'; ?>>Opslag</option>
-            </select>
+            <form method="GET" action="products.php">
+                <select id="category" name="category" onchange="this.form.submit()">
+                    <option value="">All</option>
+                    <option value="Computers" <?php if ($selectedCategory === 'A') echo 'selected'; ?>>Computers</option>
+                    <option value="Accessoires" <?php if ($selectedCategory === 'B') echo 'selected'; ?>>Accessoires</option>
+                    <option value="Displays" <?php if ($selectedCategory === 'C') echo 'selected'; ?>>Displays</option>
+                </select>
+            </form>
         </div>
-        <div class="products-grid">
-
         
-            <?php
-            // Display products based on the selected category
-            if ($selectedCategory === '') {
-                foreach ($groupedProducts as $category => $products) {
-                    foreach ($products as $product) {
-                        // Display product card
-                    }
-                }
-            } else {
-                if (isset($groupedProducts[$selectedCategory])) {
-                    foreach ($groupedProducts[$selectedCategory] as $product) {
-                        // Display product card
-                    }
-                }
-            }
-// ...
-// Display products based on the selected category
-if ($selectedCategory === '') {
-    foreach ($groupedProducts as $category => $products) {
-        foreach ($products as $product) {
-            // Display product card
-            $price = $product['price'];
-            echo "<div class='product-card'>";
-            echo "<h2 class='product-title'>{$product['name']}</h2>";
-            echo "<p class='product-description'>{$product['description']}</p>";
-            echo "<p class='product-category'>Category: {$product['category']}</p>";
-            echo "<p class='product-quantity'>Quantity: {$product['quantity']}</p>";
-            echo "<p class='product-price'>Price: $" . number_format($price, 2) . "</p>";
-            echo "<div class='actions'>";
-            echo "<a href='loan_product.php?id={$product['id']}' class='btn btn-loan'><i class='fas fa-hand-holding'></i> Loan</a>";
-            if ($is_admin) {
-                echo "<a href='edit_product.php?id={$product['id']}' class='btn btn-edit'><i class='fas fa-edit'></i> Edit</a>";
-                echo "<a href='delete_product.php?id={$product['id']}' class='btn btn-delete' onclick='return confirm(\"Are you sure you want to delete this product?\")'><i class='fas fa-trash-alt'></i> Delete</a>";
-            }
-            echo "</div>";
-            echo "</div>";
-        }
-    }
-} else {
-    if (isset($groupedProducts[$selectedCategory])) {
-        foreach ($groupedProducts[$selectedCategory] as $product) {
-            // Display product card
-            $price = $product['price'];
-            echo "<div class='product-card'>";
-            echo "<h2 class='product-title'>{$product['name']}</h2>";
-            echo "<p class='product-description'>{$product['description']}</p>";
-            echo "<p class='product-category'>Category: {$product['category']}</p>";
-            echo "<p class='product-quantity'>Quantity: {$product['quantity']}</p>";
-            echo "<p class='product-price'>Price: $" . number_format($price, 2) . "</p>";
-            echo "<div class='actions'>";
-            echo "<a href='loan_product.php?id={$product['id']}' class='btn btn-loan'><i class='fas fa-hand-holding'></i> Loan</a>";
-            if ($is_admin) {
-                echo "<a href='edit_product.php?id={$product['id']}' class='btn btn-edit'><i class='fas fa-edit'></i> Edit</a>";
-                echo "<a href='delete_product.php?id={$product['id']}' class='btn btn-delete' onclick='return confirm(\"Are you sure you want to delete this product?\")'><i class='fas fa-trash-alt'></i> Delete</a>";
-            }
-            echo "</div>";
-            echo "</div>";
-        }
-    }
-}
-?>
+        <!-- Отображение товаров -->
+        <div class="products-grid">
+            <?php foreach ($products as $product): ?>
+                <div class="product-card">
+                    <h2 class="product-title"><?= htmlspecialchars($product['name']) ?></h2>
+                    <p class="product-description"><?= htmlspecialchars($product['description']) ?></p>
+                    <p class="product-category">Category: <?= htmlspecialchars($product['category']) ?></p>
+                    <p class="product-price">Price: <?= number_format($product['price'], 2) ?> euro.</p>
+                    
+                    <!-- Форма для добавления товара в корзину -->
+                    <form method="POST" action="products.php">
+                        <input type="hidden" name="id" value="<?= $product['id'] ?>">
+                        <input type="hidden" name="name" value="<?= $product['name'] ?>">
+                        <input type="hidden" name="price" value="<?= $product['price'] ?>">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" name="quantity" min="1" value="1" required>
+                        <button type="submit" class="btn btn-add-to-cart"><i class="fas fa-cart-plus"></i> Add to your cart</button>
+                    </form>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <?php if ($is_admin): ?>
-            <a href="add_product.php" class="btn btn-add"><i class="fas fa-plus"></i> Add New Product</a>
-        <?php endif; ?>
     </section>
 </main>
-</div>
-<?php
-require '../includes/footer-section.php';
-?>
+
+<?php require '../includes/footer-section.php'; ?>
+
 </body>
 </html>
