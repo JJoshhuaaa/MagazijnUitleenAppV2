@@ -6,8 +6,16 @@ Route::get('/', function () {
     return view('home'); 
 })->name('home'); 
 
-Route::get('/head', function () {
-    return view('header-section');
+Route::get('/sign', function () {
+    return view('sign-in');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/register', function () {
+    return view('register');
 });
 
 // routes/web.php
