@@ -27,13 +27,13 @@
 </head>
 <body>
 
-    @include('includes.header') <!-- Include header -->
+    @require('includesheader') <!-- Include header -->
 
     <main>
         @yield('content') <!-- Page-specific content will go here -->
     </main>
 
-    @include('includes.footer') <!-- Include footer -->
+    @require('footer') <!-- Include footer -->
 
     <script src="{{ asset(path: 'bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>

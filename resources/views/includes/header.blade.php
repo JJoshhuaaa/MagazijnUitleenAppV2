@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-
-    <title>Magazijnuitleenapplicatie</title>
-</head>
-<body>
-
 <nav class="navbar navbar-expand-custom navbar-mainbg">
     <a class="navbar-brand navbar-logo" href="{{ url('views/home') }}">
-        <!-- <img src="{{ asset('images/logo-vista.jpg') }}" alt="Vista Logo">Vista College -->
+       <!-- <img src="{{ asset('images/logo-vista.jpg') }}" alt="Vista Logo">Vista College -->
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
@@ -38,9 +23,3 @@
         </ul>
     </div>
 </nav>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="{{ asset('js/header.js') }}"></script>
-</body>
-</html>

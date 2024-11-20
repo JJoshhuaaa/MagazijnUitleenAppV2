@@ -1,0 +1,6 @@
+/* Override the --bs-btn-bg specifically for .btn-primary */
+.btn-primary {
+    --bs-btn-bg: #00555c; /* Your desired color */
+    background-color: var(--bs-btn-bg); /* Ensure it's applied */
+  }
+  
