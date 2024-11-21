@@ -29,3 +29,10 @@ use App\Http\Controllers\AuthController;
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+use App\Http\Controllers\ReservationController;
+
+Route::get('/', [ReservationController::class, 'index'])->name('reservations.index');
+Route::get('/create', [ReservationController::class, 'create'])->name('reservations.create');
+Route::post('/', [ReservationController::class, 'store'])->name('reservations.store');
