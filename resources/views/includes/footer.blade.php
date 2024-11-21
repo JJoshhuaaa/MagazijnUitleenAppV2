@@ -2,16 +2,16 @@
     <div class="footer_section">
         <h3>MagazijnApp</h3>
         <ul>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
         </ul>
     </div>
     <div class="footer_section">
         <h3>Informatie</h3>
         <ul>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Late Return Fees</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
         </ul>
     </div>
     <div class="footer_icons">

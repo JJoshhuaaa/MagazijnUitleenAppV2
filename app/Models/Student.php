@@ -5,19 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Student extends Model
 {
     use HasFactory;
 
-    protected $table = 'products';
+    protected $table = 'students';
 
     protected $fillable = [
-        'product_name', 'description', 'category', 'barcode'
+        'student_name', 'password', 'email', 'role'
     ];
 
     public function reservations()
     {
         return $this->hasMany(Reservation::class);
     }
-
 }

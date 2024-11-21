@@ -33,3 +33,7 @@ footer {
   /* Ensure the footer stays at the bottom */
   margin-top: auto;  /* This pushes the footer to the bottom of the screen */
 }
+
+.table thead th {
+  background-color:  #00555c;
+}

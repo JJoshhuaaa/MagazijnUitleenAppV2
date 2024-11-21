@@ -7,18 +7,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('views/sign-in') }}"><i class="fas fa-user-plus"></i>Sign-in</a>
+                <a class="nav-link" href="{{ url('reservation-panel') }}"><i class="fas fa-user-plus"></i>Admin</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url('views/home') }}"><i class="fas fa-box-open"></i>Products</a>
+            <a class="nav-link" href="{{ url('/') }}"><i class="fas fa-shopping-cart"></i>Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('views/late-fee') }}"><i class="fas fa-shopping-cart"></i>Check-out</a>
+                <a class="nav-link" href="{{ url('/products') }}"><i class="fas fa-user-plus"></i>Producten</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('views/late-fees') }}"><i class="fas fa-dollar-sign"></i>Late return fees</a>
+                <a class="nav-link" href="{{ url('/barcode-search') }}"><i class="fas fa-dollar-sign"></i>Barcode</a>
             </li>
         </ul>
     </div>

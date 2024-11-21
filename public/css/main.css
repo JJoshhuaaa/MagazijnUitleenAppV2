@@ -15,21 +15,20 @@
 }
 
 html, body {
-  height: 100%; /* Make sure both the HTML and body are 100% height */
-  margin: 0;    /* Remove any default margin */
+  height: 100%; 
+  margin: 0;   
 }
 
 body {
-  display: flex;           /* Enable flexbox layout */
-  flex-direction: column;  /* Arrange items in a column (header, content, footer) */
+  display: flex;      
+  flex-direction: column;  
 }
 
 main {
-  flex: 1;  /* This ensures the main content takes up available space */
-  overflow: auto;  /* Allow scrolling if the content exceeds the available space */
+  flex: 1; 
 }
 
 footer {
-  /* Ensure the footer stays at the bottom */
-  margin-top: auto;  /* This pushes the footer to the bottom of the screen */
+  
+  margin-top: auto;  
 }
